@@ -85,3 +85,4 @@ In 2018, they released an interesting report which shows that the number of TV s
 * Here, we perform the K-Means clustering on our dataset. Here, we find the optimal value of k is 20. But, if we want to recommend some movies and tv shows then k=20 is not good so in such a case, we take the value of k as 600. The silhouette score for k=20 is 0.886575253337518 which is a very good score.
 
 * We also perform the K-means clustering using the TF-IDF. In this case, we get the optimal value of k is 800. And the silhouette score for k=800 is 0.034.
+
