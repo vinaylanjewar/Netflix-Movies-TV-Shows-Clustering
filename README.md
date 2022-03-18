@@ -68,21 +68,25 @@ In 2018, they released an interesting report which shows that the number of TV s
 * It is also interesting to see parallels between culturally comparable nations - the US and UK are closely aligned with their Netflix target ages, but radically different from, example, India or Japan!
 
 * Also, Mexico and Spain have similar content on Netflix for different age group
-## 5. Plotting the Clusters
-![image](https://user-images.githubusercontent.com/85746056/156110351-17ca8029-ad2e-405d-bd6b-b3d2cefc28aa.png)
 
 
 
-## 6. Conclusion:
-* First, we run Data Wrangling on our model to ensure that there are no duplicate entries in our dataset. After checking the duplicates in our dataset we perform analysis for null values in our dataset. Here, we found more than 30% null values in the director's column. Then, we take appropriate action for null values according to the circumstances. We remove null values of the added_date columns because there is no logical way to deal with the null values of the date column.
 
-* In the second step, we perform EDA and Data Visualization on our dataset. Here, we found that the proportion of tv shows in Netflix content is very less as compared to the movies. We can observe that the majority of Netflix material is intended for adults. There is very little content available for teens and kids. The number of movies on Netflix is growing significantly faster than the number of TV shows. Because of covid-19, there is a significant drop in the number of movies and television episodes produced after 2019. Because of covid-19, there is a significant drop in the number of movies and television episodes produced after 2019.
+## 5. Conclusion:
 
-* The United States is the most prolific generator of Netflix content, with India and the United Kingdom trailing far behind. The majority of the content on Netflix in India is comprised of movies. The fundamental reason for the variation in content must be due to market research undertaken by Netflix. It is also interesting to see parallels between culturally comparable nations - the US and UK are closely aligned with their Netflix target ages, but radically different from, for example, India or Japan!
+1)Data set contains 7787 rows and 12 columns in that cast and director features contains large number of missing values so we can drop it and we have 10 features for the further implementation
 
-* It is evident that international movies/ tv shows, tv dramas, and tv comedies are the top three genres with the most content on Netflix. It is interesting that International Movies tend to be Dramas.
+2)We have two types of content TV shows and Movies (30.86% contains TV shows and 69.14% contains Movies)
 
-* Here, we perform the K-Means clustering on our dataset. Here, we find the optimal value of k is 20. But, if we want to recommend some movies and tv shows then k=20 is not good so in such a case, we take the value of k as 600. The silhouette score for k=20 is 0.886575253337518 which is a very good score.
+3)By analysing the content added over years we get to know that in recent years netflix is focusing movies than TV shows (movies is increased by 80% and TV shows is increased by 73% compare to 2016 data)
 
-* We also perform the K-means clustering using the TF-IDF. In this case, we get the optimal value of k is 800. And the silhouette score for k=800 is 0.034.
+4)The most number of the movies and TV shows release in 2017 and 2020 respectively and united nation have the maximum content on netflix
+
+5)On Netflix, Dramas genre contains the maximum content among all of the genres and the most of the content added in december month and less content in february
+
+6)By applying the silhouette score method for n range clusters on dataset we got best score which is 0.348 for 3 clusters it means content explained well on their own clusters, by using elbow method after k = 3 curve gets linear it means k = 3 will be the best cluster
+
+7)Applied different clustering models Kmeans, hierarchical, Agglomerative clustering on data we got the best cluster arrangments
+
+8)By applying different clustering algorithms to our dataset .we get the optimal number of cluster is equal to 3
 
